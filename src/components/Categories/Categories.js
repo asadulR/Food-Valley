@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
 
 const Categories = () => {
-    const [categories, setCategories] = useState({});
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
