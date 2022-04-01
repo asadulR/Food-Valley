@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Meal from '../Meal/Meal';
+import Spinner from '../Spinner/Spinner';
 
 const Home = () => {
 
 
     const [searchText, setSearchText] = useState('');
 
+    const [loading, setLoading] = useState(false);
     const [meals, setMeals] = useState([]);
 
     useEffect(() => {
+        setLoading(true)
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
         fetch(url)
-            .then(res => res.json()).then(data => setMeals(data.meals));
+            .then(res => res.json()).then(data => {
+                setMeals(data.meals)
+                setLoading(false);
+            });
     }, [searchText])
 
     const searchFood = (e) => {
@@ -25,14 +31,20 @@ const Home = () => {
                 <input onChange={searchFood} placeholder='search food by name...' className='border-orange-400 border-2 w-full rounded-md px-3 py-2 text-lg' type="text" name="" id="" />
             </div>
             <div className='container mx-auto'>
-                <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'> 
+                <>
                     {
-                        meals ? meals.map(meal => <Meal
-                            key={meal.idMeal}
-                            meal={meal}
-                        ></Meal>) : <p className='text-lg text-center text-red-500 font-semibold'>No data found! Search again.</p>
+                        loading ? <Spinner></Spinner> :
+                        <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                            {
+
+                                meals ? meals.map(meal => <Meal
+                                    key={meal.idMeal}
+                                    meal={meal}
+                                ></Meal>) : <p className='text-lg text-center text-red-500 font-semibold'>No data found! Search again.</p>
+                            }
+                        </div>
                     }
-                </div>
+                </>
             </div>
         </div>
     );

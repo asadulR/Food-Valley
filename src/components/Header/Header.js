@@ -22,8 +22,9 @@ const Header = () => {
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/home'>Home</CustomLink>
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/about'>About</CustomLink>
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/categories'>Categories</CustomLink>
-                        <ShoppingCartIcon className='w-6 md:mr-6'></ShoppingCartIcon>
-                        <UserCircleIcon className='w-6 md:mr-6'></UserCircleIcon>
+                        <CustomLink className='font-semibold text-lg md:mr-6' to='/contact'>Contact</CustomLink>
+                        <ShoppingCartIcon className='w-8 md:mr-6 mx-auto md:ml-0 text-start'></ShoppingCartIcon>
+                        <UserCircleIcon className='w-8 mx-auto md:mr-6 md:ml-0  text-center'></UserCircleIcon>
                     </ul>
                 </nav>
             </div>

@@ -3,6 +3,9 @@ import React from 'react'
 const About = () => {
   return (
     <section className='px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2'>
+      <p className='text-center mb-10 '><a target='_blank' rel="noreferrer" href='https://crypto-masters-club.netlify.app/' className=' rounded-sm  py-2 px-3 text-white mt-3 mx-1 bg-cyan-800 w-auto sm:mb-0 text-center'>
+       Visit My <span className=' text-orange-400 font-semibold hover:underline'>Crypto Masters Club</span> Site
+      </a></p>
       <div className='grid grid-cols-1 gap-24 md:grid-cols-2'>
         <div>
           <h1 className='mb-6 text-2xl font-light text-gray-900 md:text-3xl'>
