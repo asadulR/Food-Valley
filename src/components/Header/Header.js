@@ -11,7 +11,7 @@ const Header = () => {
             <div className='md:flex justify-between items-center'>
                 <div className='flex justify-between items-center py-5 px-8 container mx-auto'>
                     <div>
-                        <Link to='home' className='text-lg font-semibold text-orange-500'>Food Valley</Link>
+                        <Link to='home' className='text-2xl font-semibold text-orange-500'>Food Valley</Link>
                     </div>
                     <div onClick={() => setOpen(!open)} className='w-7 h-7 md:hidden ml-3'>
                         {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
