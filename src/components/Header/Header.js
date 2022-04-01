@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuIcon, XIcon } from '@heroicons/react/solid'
+import { MenuIcon, ShoppingCartIcon, UserCircleIcon, XIcon } from '@heroicons/react/solid'
 import CustomLink from '../CustomLink/CustomLink';
 import { Link } from 'react-router-dom';
 const Header = () => {
@@ -22,10 +22,8 @@ const Header = () => {
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/home'>Home</CustomLink>
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/about'>About</CustomLink>
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/categories'>Categories</CustomLink>
-                        
-                        <li>Asad</li>
-                        <li>Asad</li>
-
+                        <ShoppingCartIcon className='w-6 md:mr-6'></ShoppingCartIcon>
+                        <UserCircleIcon className='w-6 md:mr-6'></UserCircleIcon>
                     </ul>
                 </nav>
             </div>
