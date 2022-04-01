@@ -20,7 +20,9 @@ const Header = () => {
                 <nav className=' w-full text-center'>
                     <ul className={`md:flex absolute md:static duration-300 ease-in bg-indigo-200  w-full ${open ? 'top-14' : 'top-[-190px]'}`}>
                         <CustomLink className='font-semibold text-lg md:mr-6' to='/home'>Home</CustomLink>
-                        <li>Asad</li>
+                        <CustomLink className='font-semibold text-lg md:mr-6' to='/about'>About</CustomLink>
+                        <CustomLink className='font-semibold text-lg md:mr-6' to='/categories'>Categories</CustomLink>
+                        
                         <li>Asad</li>
                         <li>Asad</li>
 
